@@ -1,0 +1,564 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description: Therapy App Backend using AWS Lambda, API Gateway, and DynamoDB
+
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 1024
+    Runtime: java17 # AWS Lambda supports Java 17, NOT Java 21.
+
+Resources:
+  # DynamoDB Tables
+  ClientTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: client
+      AttributeDefinitions:
+        - AttributeName: clientId
+          AttributeType: S
+        # - AttributeName: email
+        #   AttributeType: S
+        # - AttributeName: name
+        #   AttributeType: S
+        # - AttributeName: role
+        #   AttributeType: S      
+      KeySchema:
+        - AttributeName: clientId
+          KeyType: HASH
+      BillingMode: PAY_PER_REQUEST
+
+  JournalTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: journal
+      AttributeDefinitions:
+        - AttributeName: journalId
+          AttributeType: S
+        - AttributeName: clientId
+          AttributeType: S
+        - AttributeName: title
+          AttributeType: S
+      KeySchema:
+        - AttributeName: journalId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: ClientIndex
+          KeySchema:
+            - AttributeName: clientId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: TitleIndex
+          KeySchema:
+            - AttributeName: title
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  MessageTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: message
+      AttributeDefinitions:
+        - AttributeName: conversationKey
+          AttributeType: S
+        - AttributeName: senderId
+          AttributeType: S
+        - AttributeName: receiverId
+          AttributeType: S
+        - AttributeName: timestamp
+          AttributeType: S
+      KeySchema:
+        - AttributeName: conversationKey
+          KeyType: HASH
+        - AttributeName: timestamp
+          KeyType: RANGE
+      GlobalSecondaryIndexes:
+        - IndexName: SenderIndex
+          KeySchema:
+            - AttributeName: senderId
+              KeyType: HASH
+            - AttributeName: timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+        - IndexName: ReceiverIndex
+          KeySchema:
+            - AttributeName: receiverId
+              KeyType: HASH
+            - AttributeName: timestamp
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+        - IndexName: SenderReceiverIndex
+          KeySchema:
+            - AttributeName: senderId
+              KeyType: HASH
+            - AttributeName: receiverId
+              KeyType: RANGE
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  TherapistTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: therapist
+      AttributeDefinitions:
+        - AttributeName: therapistId
+          AttributeType: S
+        # - AttributeName: email
+        #   AttributeType: S
+        - AttributeName: specialization
+          AttributeType: S
+        - AttributeName: role
+          AttributeType: S
+      KeySchema:
+        - AttributeName: therapistId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: SpecializationIndex
+          KeySchema:
+            - AttributeName: specialization
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: RoleIndex
+          KeySchema:
+            - AttributeName: role
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  SessionTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: session
+      AttributeDefinitions:
+        - AttributeName: sessionId
+          AttributeType: S
+        # - AttributeName: email
+        #   AttributeType: S
+        - AttributeName: therapistId
+          AttributeType: S
+        - AttributeName: clientId
+          AttributeType: S
+        - AttributeName: sessionDate
+          AttributeType: S
+      KeySchema:
+        - AttributeName: sessionId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: TherapistIdIndex
+          KeySchema:
+            - AttributeName: therapistId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: ClientIdIndex
+          KeySchema:
+            - AttributeName: clientId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: SessionDateIndex
+          KeySchema:
+            - AttributeName: sessionDate
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  AppointmentTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: appointment
+      AttributeDefinitions:
+        - AttributeName: therapistId
+          AttributeType: S
+        - AttributeName: clientId
+          AttributeType: S
+        - AttributeName: appointmentId
+          AttributeType: S
+        - AttributeName: status
+          AttributeType: S
+        - AttributeName: appointmentDate
+          AttributeType: S
+      KeySchema:
+        - AttributeName: appointmentId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: ClientIndex
+          KeySchema:
+            - AttributeName: clientId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: TherapistIndex
+          KeySchema:
+            - AttributeName: therapistId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: DateIndex
+          KeySchema:
+            - AttributeName: appointmentDate
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: StatusIndex
+          KeySchema:
+            - AttributeName: status
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  TherapistRequestTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: therapistRequests
+      AttributeDefinitions:
+        - AttributeName: therapistId
+          AttributeType: S
+        - AttributeName: clientId
+          AttributeType: S
+        - AttributeName: type
+          AttributeType: S
+        - AttributeName: status
+          AttributeType: S
+        - AttributeName: requestId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: requestId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: TypeIndex
+          KeySchema:
+            - AttributeName: type
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: TherapistIndex
+          KeySchema:
+            - AttributeName: therapistId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: ClientIndex
+          KeySchema:
+            - AttributeName: clientId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: StatusIndex
+          KeySchema:
+            - AttributeName: status
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  ClientRequestTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: clientRequests
+      AttributeDefinitions:
+        - AttributeName: therapistId
+          AttributeType: S
+        - AttributeName: clientId
+          AttributeType: S
+        - AttributeName: status
+          AttributeType: S
+        - AttributeName: requestId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: requestId
+          KeyType: HASH
+      GlobalSecondaryIndexes:
+        - IndexName: TherapistIndex
+          KeySchema:
+            - AttributeName: therapistId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: ClientIndex
+          KeySchema:
+            - AttributeName: clientId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+        - IndexName: StatusIndex
+          KeySchema:
+            - AttributeName: status
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+      BillingMode: PAY_PER_REQUEST
+
+  # AWS Lambda Functions
+  AuthFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: AuthFunction
+      Handler: com.therapy.auth.AuthHandler::handleRequest
+      CodeUri: auth-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: client
+        - DynamoDBCrudPolicy:
+            TableName: therapist
+      Events:
+        RegisterUser:
+          Type: Api
+          Properties:
+            Path: /auth/register
+            Method: post
+        LoginUser:
+          Type: Api
+          Properties:
+            Path: /auth/login
+            Method: post
+
+  UserFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: ClientFunction
+      Handler: com.therapy.client.ClientHandler::handleRequest
+      CodeUri: client-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: client
+        - DynamoDBCrudPolicy:
+            TableName: therapist
+      Events:
+        GetUser:
+          Type: Api
+          Properties:
+            Path: /user/get
+            Method: get
+        UpdateUser:
+          Type: Api
+          Properties:
+            Path: /user/get
+            Method: put
+        DeleteUser:
+          Type: Api
+          Properties:
+            Path: /user/delete
+            Method: post
+        MappingTherapist:
+          Type: Api
+          Properties:
+            Path: /mapping
+            Method: post
+
+  JournalFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: JournalFunction
+      Handler: com.therapy.journal.JournalHandler::handleRequest
+      CodeUri: journal-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: journal
+      Events:
+        GetJournals:
+          Type: Api
+          Properties:
+            Path: /journals
+            Method: get
+        CreateJournal:
+          Type: Api
+          Properties:
+            Path: /journals
+            Method: post
+        DeleteJournal:
+          Type: Api
+          Properties:
+            Path: /journals
+            Method: delete
+        ModifyJournalTherapist:
+          Type: Api
+          Properties:
+            Path: /journals/manage-therapist
+            Method: post
+        AddEmotion:
+          Type: Api
+          Properties:
+            Path: /journals/emotion
+            Method: post
+
+  MessageFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: MessageFunction
+      Handler: com.therapy.message.MessageHandler::handleRequest
+      CodeUri: message-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: message
+      Events:
+        GetConversation:
+          Type: Api
+          Properties:
+            Path: /messages/conversation
+            Method: get
+        CreateMessage:
+          Type: Api
+          Properties:
+            Path: /messages
+            Method: post
+        GetAllMessages:
+          Type: Api
+          Properties:
+            Path: /messages/all/{senderId}
+            Method: get
+        SearchMessage:
+          Type: Api
+          Properties:
+            Path: /messages/{keyword}
+            Method: get
+
+  SessionFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: SessionFunction
+      Handler: com.therapy.session.SessionHandler::handleRequest
+      CodeUri: session-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: session
+      Events:
+        GetSession:
+          Type: Api
+          Properties:
+            Path: /sessions
+            Method: get
+        CreateSession:
+          Type: Api
+          Properties:
+            Path: /sessions
+            Method: post
+        AddClient:
+          Type: Api
+          Properties:
+            Path: /sessions
+            Method: put
+        SearchOpenSessions:
+          Type: Api
+          Properties:
+            Path: /sessions/public
+            Method: get
+        SearchSessionNotes:
+          Type: Api
+          Properties:
+            Path: /sessions/notes
+            Method: post
+
+  TherapistFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: TherapistFunction
+      Handler: com.therapy.therapist.TherapistHandler::handleRequest
+      CodeUri: therapist-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: therapist
+      Events:
+        GetAllTherapist:
+          Type: Api
+          Properties:
+            Path: /therapists/public
+            Method: get
+        TherapistUpdate:
+          Type: Api
+          Properties:
+            Path: /therapists/update
+            Method: put
+        AddClient:
+          Type: Api
+          Properties:
+            Path: /therapists/update
+            Method: post
+
+  AppointmentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: AppointmentFunction
+      Handler: com.therapy.appointment.AppointmentHandler::handleRequest
+      CodeUri: appointment-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: appointment
+      Events:
+        GetAppointments:
+          Type: Api
+          Properties:
+            Path: /appointments
+            Method: get
+        CreateAppointment:
+          Type: Api
+          Properties:
+            Path: /appointments
+            Method: post
+        UpdateAppointment:
+          Type: Api
+          Properties:
+            Path: /appointments
+            Method: put
+
+  RequestsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: RequestsFunction
+      Handler: com.therapy.auth.RequestsHandler::handleRequest
+      CodeUri: auth-function/
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: therapistRequests
+        - DynamoDBCrudPolicy:
+            TableName: clientRequests
+        - DynamoDBCrudPolicy:
+            TableName: client
+        - DynamoDBCrudPolicy:
+            TableName: therapist
+        - DynamoDBCrudPolicy:
+            TableName: journal
+        - DynamoDBCrudPolicy:
+            TableName: appointment
+      Events:
+        CreateTherapistRequest:
+          Type: Api
+          Properties:
+            Path: /therapist-requests
+            Method: post
+        GetTherapistRequest:
+          Type: Api
+          Properties:
+            Path: /therapist-requests
+            Method: get
+        UpdateClientRequest:
+          Type: Api
+          Properties:
+            Path: /therapist-requests
+            Method: put
+        CreateClientRequest:
+          Type: Api
+          Properties:
+            Path: /client-requests
+            Method: post
+        GetClientRequest:
+          Type: Api
+          Properties:
+            Path: /client-requests
+            Method: get
+        UpdateTherapistRequest:
+          Type: Api
+          Properties:
+            Path: /client-requests
+            Method: put

@@ -1,0 +1,3579 @@
+{
+	"info": {
+		"_postman_id": "bbc422d8-f7e0-4cef-9ef9-b3d5bd62f0dd",
+		"name": "Therapy App Endpoints Lambda",
+		"description": "The email is accepted many times , also login isnt working",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34190769"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapist-requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapist-requests"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:36:42 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\n    \"status\": \"PENDING\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\",\r\n   \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapist-requests?status=PENDING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapist-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:50:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\n        \"type\": \"MAPPING\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\",\r\n   \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapist-requests?clientId=e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapist-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:07:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\n        \"type\": \"MAPPING\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\",\r\n   \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapist-requests?therapistId=9f52ceb9-bdae-4db1-9078-06e7604086c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapist-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5"
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:07:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "212"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\n        \"type\": \"MAPPING\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n  \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\"\r\n   //\"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    //\"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client-requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:10:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\n    \"status\": \"PENDING\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n  \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\"\r\n   //\"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    //\"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client-requests?status=PENDING",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING"
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:15:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\n        \"requestedDate\": \"2025-03-02T18:10:02.682Z\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n  \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\"\r\n   //\"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    //\"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client-requests?therapistId=9f52ceb9-bdae-4db1-9078-06e7604086c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5"
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:15:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\n        \"requestedDate\": \"2025-03-02T18:10:02.682Z\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n  \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n  \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n   \"message\": \"string\"\r\n   //\"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    //\"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client-requests?clientId=e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:15:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "238"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\n        \"requestedDate\": \"2025-03-02T18:10:02.682Z\",\n        \"message\": \"string\",\n        \"status\": \"PENDING\"\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  \"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\r\n//   \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n//   \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n//    \"message\": \"string\"\r\n   //\"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    \"status\": \"APPROVED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapist-requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapist-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:22:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Client request updated successfully\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  //\"type\": \"MAPPING\",\r\n  //\"requestId\": \"4cdec934-7c06-471f-97f5-27c6b607ff62\",\r\n//   \"clientId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n//   \"therapistId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n//   \"requestedDate\":\"2025-03-02T18:10:02.682Z\",\r\n//   \"journalId\": \"string\",\r\n//    \"message\": \"string\"\r\n   \"requestId\": \"ab3cdcd3-e729-4096-a3e2-2552425488b6\",\r\n    \"status\": \"APPROVED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client-requests",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client-requests"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "PENDING",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 18:23:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Therapist request updated successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "appointment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"therapist1@example.com\",\r\n    \"password\":\"password\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login/therapist",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login",
+						"therapist"
+					]
+				},
+				"description": "The email id isnt unique property , so it is accepting many times, login method isnt working"
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sender1@example.com\",\r\n    \"password\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Jan 2025 17:43:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"therapist1@example.com\",\r\n    \"password\":\"password\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 20 Jan 2025 10:19:43 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGVyYXBpc3QxQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM3MzY4MzgzLCJleHAiOjE3Mzc0NTQ3ODN9.Cf4CCGQamRkY7EzchGrDcp3bY46tWhrzBDOyDXhUYOM\",\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0aGVyYXBpc3QxQGV4YW1wbGUuY29tIiwiaWF0IjoxNzM3MzY4MzgzLCJleHAiOjE3Mzc5NzMxODN9.BMZjBOBWWhepKKxYIz0__MDzkgRpnLDjxKKlKHbrUEI\",\n    \"email\": \"therapist1@example.com\",\n    \"roles\": [\n        \"ROLE_THERAPIST\"\n    ],\n    \"tokenType\": \"Bearer\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n        \"sharedNotes\": \"\",\r\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n        \"appointmentDate\":\"2025-03-02T17:00:46.612Z\",\r\n        \"status\":\"CONFIRMED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/appointments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"appointments"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:12:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "705"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentId\": {\n        \"s\": \"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentDate\": {\n        \"s\": \"2025-03-02T17:00:46.612Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"status\": {\n        \"s\": \"CONFIRMED\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/appointments?appointmentId=856bb2e5-e5ca-486b-a7fe-eb9eca0eda70",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "appointmentId",
+									"value": "856bb2e5-e5ca-486b-a7fe-eb9eca0eda70"
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:17:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "705"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentId\": {\n        \"s\": \"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentDate\": {\n        \"s\": \"2025-03-02T17:00:46.612Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"status\": {\n        \"s\": \"CONFIRMED\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/appointments?clientId=9f52ceb9-bdae-4db1-9078-06e7604086c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "appointmentId",
+									"value": "856bb2e5-e5ca-486b-a7fe-eb9eca0eda70",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5"
+								},
+								{
+									"key": "therapistId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:17:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "707"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": {\n            \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"clientId\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"appointmentId\": {\n            \"s\": \"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"appointmentDate\": {\n            \"s\": \"2025-03-02T17:00:46.612Z\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"status\": {\n            \"s\": \"CONFIRMED\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        }\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/appointments?therapistId=e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "appointmentId",
+									"value": "856bb2e5-e5ca-486b-a7fe-eb9eca0eda70",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:17:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "707"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": {\n            \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"clientId\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"appointmentId\": {\n            \"s\": \"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"appointmentDate\": {\n            \"s\": \"2025-03-02T17:00:46.612Z\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"status\": {\n            \"s\": \"CONFIRMED\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        }\n    }\n]"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MzA4NjMwLCJleHAiOjE3MzczOTUwMzB9.Ar9VzijygP2KjeJziBsI3hONYWcP_sthC9FllHwxYHa6VzwGLQ6TBVy6mCK-DkswipLtnwK5qkkIu9q1cH3L6Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appointmentId\":\"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\r\n    \"appointmentDate\":\"2025-03-02T17:00:46.612Z\",\r\n        \"status\":\"CANCELLED\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/appointments?therapistId=e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"appointments"
+							],
+							"query": [
+								{
+									"key": "appointmentId",
+									"value": "856bb2e5-e5ca-486b-a7fe-eb9eca0eda70",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "therapistId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:20:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "705"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentId\": {\n        \"s\": \"856bb2e5-e5ca-486b-a7fe-eb9eca0eda70\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"appointmentDate\": {\n        \"s\": \"2025-03-02T17:00:46.612Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"status\": {\n        \"s\": \"CANCELLED\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "client endpoints",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/clients/sender1@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"sender1@example.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "inline;filename=f.txt"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Jan 2025 01:46:29 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"sender1@example.com\",\n    \"name\": \"name\",\n    \"password\": null,\n    \"description\": null,\n    \"therapists\": null,\n    \"role\": \"CLIENT\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/clients/sender1@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"sender1@example.com"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Jan 2025 01:47:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/clients/sender1@example.com/mapTherapist/therapist@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"sender1@example.com",
+								"mapTherapist",
+								"therapist@example.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "inline;filename=f.txt"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Jan 2025 13:37:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"sender1@example.com\",\n    \"name\": \"name\",\n    \"password\": \"$2a$10$RUCPUpRRS8d1ILZ54GvUhOwViIrGGv6OR4qzJmAD7kacJCpqSCJOO\",\n    \"description\": null,\n    \"therapists\": [\n        \"therapist@example.com\"\n    ],\n    \"role\": \"CLIENT\"\n}"
+				},
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/clients/sender1@example.com/unmapTherapist/therapist@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"clients",
+								"sender1@example.com",
+								"unmapTherapist",
+								"therapist@example.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Disposition",
+							"value": "inline;filename=f.txt"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 19 Jan 2025 13:46:01 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": \"sender1@example.com\",\n    \"name\": \"name\",\n    \"password\": \"$2a$10$RUCPUpRRS8d1ILZ54GvUhOwViIrGGv6OR4qzJmAD7kacJCpqSCJOO\",\n    \"description\": null,\n    \"therapists\": [],\n    \"role\": \"CLIENT\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Journal Endpoints",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"title\":\"test title\",\r\n    \"content\":\"test content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:31:44 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "532"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"journalId\": {\n        \"s\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"title\": {\n        \"s\": \"test title\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"content\": {\n        \"s\": \"test content\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"title\":\"test title\",\r\n    \"content\":\"test content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals?journalUuid=f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:34:10 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"journalId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"title\": \"test title\",\n        \"content\": \"test content\"\n    }\n]"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"title\":\"test title\",\r\n    \"content\":\"test content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals?clientId=9f52ceb9-bdae-4db1-9078-06e7604086c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:35:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"journalId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"title\": \"test title\",\n        \"content\": \"test content\"\n    }\n]"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"title\":\"test title\",\r\n    \"content\":\"test content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals?keyword=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:36:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "150"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"journalId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"title\": \"test title\",\n        \"content\": \"test content\"\n    }\n]"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"title\":\"test title\",\r\n    \"content\":\"test content\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals?journalUuid=f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec"
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "NO CONTENT",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:36:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"journalId\":\"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"action\":\"ADD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals/manage-therapist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals",
+								"manage-therapist"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:40:48 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "778"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"journalId\": {\n        \"s\": \"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"therapists\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [\n            {\n                \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n                \"n\": null,\n                \"b\": null,\n                \"m\": null,\n                \"l\": null,\n                \"bs\": null,\n                \"ns\": null,\n                \"ss\": null,\n                \"bool\": null,\n                \"null\": null\n            }\n        ],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"title\": {\n        \"s\": \"test title\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"content\": {\n        \"s\": \"test content\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"journalId\":\"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"action\":\"REMOVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals/manage-therapist",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals",
+								"manage-therapist"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:41:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "644"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"journalId\": {\n        \"s\": \"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"therapists\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"title\": {\n        \"s\": \"test title\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"content\": {\n        \"s\": \"test content\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Journal Endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"journalId\":\"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\r\n    // \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    // \"action\":\"REMOVE\"\r\n    \"emotion\": {\r\n    \"name\": \"emotion\",\r\n    \"intensity\": 5,\r\n    \"timestamp\": \"2025-03-02T13:41:40.240Z\"\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/journals/emotion",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"journals",
+								"emotion"
+							],
+							"query": [
+								{
+									"key": "journalUuid",
+									"value": "f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "test",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:42:39 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1211"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"emotions\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [\n            {\n                \"s\": null,\n                \"n\": null,\n                \"b\": null,\n                \"m\": {\n                    \"intensity\": {\n                        \"s\": \"5\",\n                        \"n\": null,\n                        \"b\": null,\n                        \"m\": null,\n                        \"l\": null,\n                        \"bs\": null,\n                        \"ns\": null,\n                        \"ss\": null,\n                        \"bool\": null,\n                        \"null\": null\n                    },\n                    \"name\": {\n                        \"s\": \"emotion\",\n                        \"n\": null,\n                        \"b\": null,\n                        \"m\": null,\n                        \"l\": null,\n                        \"bs\": null,\n                        \"ns\": null,\n                        \"ss\": null,\n                        \"bool\": null,\n                        \"null\": null\n                    },\n                    \"timestamp\": {\n                        \"s\": \"2025-03-02T13:41:40.240Z\",\n                        \"n\": null,\n                        \"b\": null,\n                        \"m\": null,\n                        \"l\": null,\n                        \"bs\": null,\n                        \"ns\": null,\n                        \"ss\": null,\n                        \"bool\": null,\n                        \"null\": null\n                    }\n                },\n                \"l\": null,\n                \"bs\": null,\n                \"ns\": null,\n                \"ss\": null,\n                \"bool\": null,\n                \"null\": null\n            }\n        ],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"journalId\": {\n        \"s\": \"41f9b466-3030-4d35-abb8-2b52a2a9294d\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"therapists\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"title\": {\n        \"s\": \"test title\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"content\": {\n        \"s\": \"test content\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Message Endpoint",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Message Endpoint",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n        \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\r\n        \"content\":\"hello \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:45:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "122"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n    \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n    \"content\": \"hello \"\n}"
+				},
+				{
+					"name": "Message Endpoint",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n        \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\r\n        \"content\":\"hello \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/conversation?conversationKey=9f52ceb9-bdae-4db1-9078-06e7604086c5_f70ece22-72bf-411d-b4ec-bbda2ee54aec",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"conversation"
+							],
+							"query": [
+								{
+									"key": "conversationKey",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5_f70ece22-72bf-411d-b4ec-bbda2ee54aec"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:47:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "257"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"conversationKey\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5_f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n        \"content\": \"hello \",\n        \"timestamp\": \"2025-03-02T13:45:40.555Z\"\n    }\n]"
+				},
+				{
+					"name": "Message Endpoint",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n        \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\r\n        \"content\":\"hello \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/all/9f52ceb9-bdae-4db1-9078-06e7604086c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"all",
+								"9f52ceb9-bdae-4db1-9078-06e7604086c5"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:49:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "737"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"senderId\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"receiverId\": {\n            \"s\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"conversationKey\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5_f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"content\": {\n            \"s\": \"hello \",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"timestamp\": {\n            \"s\": \"2025-03-02T13:45:40.555Z\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        }\n    }\n]"
+				},
+				{
+					"name": "Message Endpoint",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n        \"receiverId\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\r\n        \"content\":\"hello \"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/messages/hello",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"messages",
+								"hello"
+							],
+							"query": [
+								{
+									"key": "senderId",
+									"value": "9f52ceb9-bdae-4db1-9078-06e7604086c5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 14:08:41 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "737"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"senderId\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"receiverId\": {\n            \"s\": \"f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"conversationKey\": {\n            \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5_f70ece22-72bf-411d-b4ec-bbda2ee54aec\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"content\": {\n            \"s\": \"hello \",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        },\n        \"timestamp\": {\n            \"s\": \"2025-03-02T13:45:40.555Z\",\n            \"n\": null,\n            \"b\": null,\n            \"m\": null,\n            \"l\": null,\n            \"bs\": null,\n            \"ns\": null,\n            \"ss\": null,\n            \"bool\": null,\n            \"null\": null\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Session endpoints",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\":\"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"sessionDate\":\"2025-03-01T14:08:54.077Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 14:14:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "771"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"isOpen\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": true,\n        \"null\": null\n    },\n    \"sharedNotes\": {\n        \"s\": \"\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionDate\": {\n        \"s\": \"2025-03-01T14:08:54.077Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"privatenotes\": {\n        \"s\": \"\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionId\": {\n        \"s\": \"c2e4ad9b-94aa-4474-ae8e-957d43afd389\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\":\"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"sessionDate\":\"2025-03-01T14:08:54.077Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions?isOpen=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 14:15:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "197"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"isOpen\": null,\n        \"sharedNotes\": \"\",\n        \"sessionDate\": \"2025-03-01T14:08:54.077Z\",\n        \"privatenotes\": \"\",\n        \"sessionId\": \"c2e4ad9b-94aa-4474-ae8e-957d43afd389\"\n    }\n]"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\":\"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"sessionDate\":\"2025-03-01T14:08:54.077Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions?userId=e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 14:16:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "197"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"isOpen\": null,\n        \"sharedNotes\": \"\",\n        \"sessionDate\": \"2025-03-01T14:08:54.077Z\",\n        \"privatenotes\": \"\",\n        \"sessionId\": \"c2e4ad9b-94aa-4474-ae8e-957d43afd389\"\n    }\n]"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\":\"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"sessionDate\":\"2025-03-01T14:08:54.077Z\",\r\n    \"sharedNotes\":\"test shared notes\",\r\n    \"privatenotes\":\"test private notes\",\r\n    \"isOpen\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 15:32:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "806"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"isOpen\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": true,\n        \"null\": null\n    },\n    \"sharedNotes\": {\n        \"s\": \"test shared notes\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionDate\": {\n        \"s\": \"2025-03-01T14:08:54.077Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"privatenotes\": {\n        \"s\": \"test private notes\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionId\": {\n        \"s\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 15:33:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "953"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"isOpen\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": false,\n        \"null\": null\n    },\n    \"sharedNotes\": {\n        \"s\": \"test shared notes\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clientId\": {\n        \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionDate\": {\n        \"s\": \"2025-03-01T14:08:54.077Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"privatenotes\": {\n        \"s\": \"test private notes\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"sessionId\": {\n        \"s\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sessionId\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/public",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"public"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 15:35:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "247"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"isOpen\": null,\n        \"sharedNotes\": \"\",\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"sessionDate\": \"2025-03-01T14:08:54.077Z\",\n        \"privatenotes\": \"\",\n        \"sessionId\": \"c2e4ad9b-94aa-4474-ae8e-957d43afd389\"\n    }\n]"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"sessionId\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\r\n    \"userId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"userRole\":\"client\",\r\n    \"keyword\":\"private\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"notes"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:06:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				},
+				{
+					"name": "Session endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"sessionId\": \"df58050a-90a4-4506-9a6f-cde629df25b5\",\r\n    \"userId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"userRole\":\"client\",\r\n    \"keyword\":\"shared\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/sessions/notes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sessions",
+								"notes"
+							],
+							"query": [
+								{
+									"key": "isOpen",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "userId",
+									"value": "e25ac510-e3af-41cf-9ca8-e7b4f0d6d566",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:06:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "563"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"isOpen\": null,\n        \"sharedNotes\": \"test shared notes\",\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"sessionDate\": \"2025-03-01T14:08:54.077Z\",\n        \"privatenotes\": \"test private notes\",\n        \"sessionId\": \"77f08b41-480b-4dc2-b58c-dfb74ab4d6a2\"\n    },\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"isOpen\": null,\n        \"sharedNotes\": \"test shared notes\",\n        \"clientId\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n        \"sessionDate\": \"2025-03-01T14:08:54.077Z\",\n        \"privatenotes\": \"test private notes\",\n        \"sessionId\": \"df58050a-90a4-4506-9a6f-cde629df25b5\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Therapist endpoints",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "Therapist endpoints",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/therapists/public",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapists",
+								"public"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:09:32 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "143"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"password\": \"password\",\n        \"role\": \"therapist\",\n        \"name\": \"name\",\n        \"email\": \"therapist@example.com\"\n    }\n]"
+				},
+				{
+					"name": "Therapist endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"action\":\"ADD\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapists/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapists",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:11:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "864"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"password\": {\n        \"s\": \"password\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"role\": {\n        \"s\": \"therapist\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clients\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [\n            {\n                \"s\": \"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\n                \"n\": null,\n                \"b\": null,\n                \"m\": null,\n                \"l\": null,\n                \"bs\": null,\n                \"ns\": null,\n                \"ss\": null,\n                \"bool\": null,\n                \"null\": null\n            }\n        ],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"name\": {\n        \"s\": \"name\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"email\": {\n        \"s\": \"therapist@example.com\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Therapist endpoints",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"action\":\"REMOVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapists/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapists",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:12:24 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "730"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"password\": {\n        \"s\": \"password\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"role\": {\n        \"s\": \"therapist\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clients\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"name\": {\n        \"s\": \"name\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"email\": {\n        \"s\": \"therapist@example.com\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Therapist endpoints",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    // \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"type\":\"specialization\",\r\n    \"action\":\"ADD\",\r\n    \"value\":\"depression\"\r\n//     \"specialization\": [\r\n//     \"string\"\r\n//   ],\r\n//   \"availableSlots\": [\r\n//     \"2025-03-02T16:12:33.460Z\"\r\n//   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapists/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapists",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 16:58:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "863"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"password\": {\n        \"s\": \"password\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"role\": {\n        \"s\": \"therapist\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clients\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"name\": {\n        \"s\": \"name\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"specialization\": {\n        \"s\": \"sleep, depression\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"email\": {\n        \"s\": \"therapist@example.com\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "Therapist endpoints",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    // \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"type\":\"availableSlots\",\r\n    \"action\":\"REMOVE\",\r\n    // \r\n    \"value\":\"2025-03-01T16:12:33.460Z\"\r\n//     \"specialization\": [\r\n//     \"string\"\r\n//   ],\r\n//   \"availableSlots\": [\r\n//     \"2025-03-02T16:12:33.460Z\"\r\n//   ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/therapists/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"therapists",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 17:00:01 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1003"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"therapistId\": {\n        \"s\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"password\": {\n        \"s\": \"password\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"role\": {\n        \"s\": \"therapist\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clients\": {\n        \"s\": null,\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": [],\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"name\": {\n        \"s\": \"name\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"specialization\": {\n        \"s\": \"sleep, depression\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"availableSlots\": {\n        \"s\": \"2025-03-02T16:12:33.460Z\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"email\": {\n        \"s\": \"therapist@example.com\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"sender1@example.com\",\r\n    \"password\":\"password\",\r\n    \"name\":\"name\",\r\n    \"role\":\"client\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/auth/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"sender1@example.com\",\r\n    \"password\":\"password\",\r\n    \"name\":\"name\",\r\n    \"role\":\"client\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 12:38:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User registered successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "User",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/get?userId=8f99acbf-b11a-4040-8e9b-5a28805c66e1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"get"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "8f99acbf-b11a-4040-8e9b-5a28805c66e1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/user/get?userId=8f99acbf-b11a-4040-8e9b-5a28805c66e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "8f99acbf-b11a-4040-8e9b-5a28805c66e1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 12:53:02 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "65"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"role\": \"\",\n    \"name\": \"\",\n    \"description\": \"\",\n    \"email\": \"test@example.com\"\n}"
+				},
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"userId\":\"8f99acbf-b11a-4040-8e9b-5a28805c66e1\",\r\n    \"name\": \"test 1\",\r\n    \"role\":\"client\",\r\n    \"description\":\"test user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/get?userId=8f99acbf-b11a-4040-8e9b-5a28805c66e1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"get"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "8f99acbf-b11a-4040-8e9b-5a28805c66e1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:17:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "737"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"password\": {\n        \"s\": \"password123\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"clientId\": {\n        \"s\": \"8f99acbf-b11a-4040-8e9b-5a28805c66e1\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"role\": {\n        \"s\": \"client\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"name\": {\n        \"s\": \"test 1\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"description\": {\n        \"s\": \"test user\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    },\n    \"email\": {\n        \"s\": \"test@example.com\",\n        \"n\": null,\n        \"b\": null,\n        \"m\": null,\n        \"l\": null,\n        \"bs\": null,\n        \"ns\": null,\n        \"ss\": null,\n        \"bool\": null,\n        \"null\": null\n    }\n}"
+				},
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"userId\":\"8f99acbf-b11a-4040-8e9b-5a28805c66e1\",\r\n    \"name\": \"test 1\",\r\n    \"role\":\"client\",\r\n    \"password\":\"password123\",\r\n    \"email\":\"test@example.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/user/delete",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"delete"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:21:20 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"User Deleted\"\n}"
+				},
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"action\":\"MAP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mapping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mapping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:28:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Mapping modified successfully\"\n}"
+				},
+				{
+					"name": "User",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW5kZXIxQGV4YW1wbGUuY29tIiwicm9sZXMiOlsiUk9MRV9DTElFTlQiXSwiaWF0IjoxNzM3MjUxMDM3LCJleHAiOjE3MzczMzc0Mzd9.j5VoowdcYx0XXlbb2ETyhc9T4y7kjCpyvez1zNUp9mWqfs4sKuF7dJUCI7V85n2wJVyiVLc7tg3CPk7MzE-BLw",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n    \"clientId\":\"9f52ceb9-bdae-4db1-9078-06e7604086c5\",\r\n    \"therapistId\": \"e25ac510-e3af-41cf-9ca8-e7b4f0d6d566\",\r\n    \"action\":\"UNMAP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/mapping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"mapping"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/3.1.3 Python/3.12.6"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 02 Mar 2025 13:28:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Mapping modified successfully\"\n}"
+				}
+			]
+		}
+	]
+}

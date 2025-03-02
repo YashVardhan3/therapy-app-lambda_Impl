@@ -13,7 +13,7 @@ The Therapy App Backend exposes a collection of REST APIs for:
 - Appointment scheduling (AppointmentFunction)
 - Handling therapist and client requests (RequestsFunction)
 
-A Postman collection **Endpoints**(/therapy-app/Therapy%20App%20Endpoints%20Lambda.postman_collection.json) containing all API calls and their saved responses is provided in the `therapy-app` folder.
+A Postman collection [**Endpoints**](https://github.com/YashVardhan3/therapy-app-lambda_Impl/blob/main/therapy-app/Therapy%20App%20Endpoints%20Lambda.postman_collection.json) containing all API calls and their saved responses is provided in the `therapy-app` folder.
 
 ## Technologies Used
 
@@ -78,7 +78,3 @@ A Postman collection **Endpoints**(/therapy-app/Therapy%20App%20Endpoints%20Lamb
 ## Conclusion
 
 This project demonstrates a locally deployable serverless backend using AWS SAM CLI, LocalStack, and Docker. While most of the APIs work locally, authentication via Cognito is not available for local testing. Use the provided Postman collection to test the endpoints and verify functionality.
-
----
-
-Feel free to modify this README.md to suit your project needs.
